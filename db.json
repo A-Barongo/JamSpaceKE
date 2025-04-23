@@ -1,0 +1,39 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "name": "Jane Doe",
+        "email": "jane@example.com",
+        "password": "123456"  
+      }
+    ],
+    "studios": [
+      {
+        "id": 1,
+        "name": "BoothaTime Studio",
+        "location": "Nairobi",
+        "instruments": ["drums", "keyboard", "guitar"],
+        "image": "/images/boothatime.jpg",
+        "timeSlots": [
+          {
+            "slot": "10:00 - 12:00",
+            "available": true
+          },
+          {
+            "slot": "12:00 - 14:00",
+            "available": false
+          }
+        ]
+      }
+    ],
+    "bookings": [
+      {
+        "id": 1,
+        "userId": 1,
+        "studioId": 1,
+        "slot": "10:00 - 12:00",
+        "date": "2025-04-25"
+      }
+    ]
+  }
+  

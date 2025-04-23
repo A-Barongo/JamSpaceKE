@@ -1,5 +1,6 @@
 import React from 'react'
-import bookingForm from '../components/BookingForm'
+import BookingForm from '../components/BookingForm'
+import { useOutletContext } from "react-router-dom"
 
 function FindStudio() {
   return (

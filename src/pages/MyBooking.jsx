@@ -1,8 +1,12 @@
 import React from 'react'
+import BookingDetails from '../components/BookingDetails'
+import { useOutletContext } from "react-router-dom"
 
 function MyBooking() {
   return (
-    <div>MyBooking</div>
+    <div>
+      <BookingDetails/>
+    </div>
   )
 }
 

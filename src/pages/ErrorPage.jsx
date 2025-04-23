@@ -2,7 +2,9 @@ import React from 'react'
 
 function ErrorPage() {
   return (
-    <div>ErrorPage</div>
+    <div>
+      <h1>Oops!!Something Went Wrong!!</h1>
+    </div>
   )
 }
 

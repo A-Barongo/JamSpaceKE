@@ -3,29 +3,87 @@ import { useState } from 'react'
 
 function NewStudioForm({studios,setStudios}) {
 
-const[studioName,setStudioName]=useState()
-const[studioLocation,setStudioLocation]=useState()
-const[instruments,setInstruments]=useState()
-const[price,setPrice]=useState()
-const[image,setimage]=useState()
-const[description,setDescription]=useState()
-const[email,setEmail]=useState()
-const[tel,setTel]=useState()
-const[studioData,setStudioData]=useState()
+const[studioName,setStudioName]=useState("")
+const[studioLocation,setStudioLocation]=useState("")
+const[instruments,setInstruments]=useState("")
+const[price,setPrice]=useState("")
+const[image,setImage]=useState(" ")
+const[description,setDescription]=useState("")
+const[email,setEmail]=useState("")
+const[tel,setTel]=useState("")
 
-function
+
+function handleNameChange(event){
+  setStudioName(event.target.value)
+}
+function handleLocationChange(event){
+  setStudioLocation(event.target.value)
+}
+function handleInstrumentsChange(event){
+  setInstruments(event.target.value)
+}
+function handlePriceChange(event){
+  setPrice(event.target.value)
+}
+function handleImageChange(event){
+  setImage(event.target.value)
+}
+function handleDescriptionChange(event){
+  setDescription(event.target.value)
+}
+function handleEmailChange(event){
+  setEmail(event.target.value)
+}
+function handleTelChange(event){
+  setTel(event.target.value)
+}
+function handleSubmit(event){
+  event.preventDefault()
+  const newStudio = {
+    name: studioName,
+    location: studioLocation,
+    instruments: instruments.split(",").map(instr => instr.trim()), 
+    price: parseFloat(price),
+    image: image,
+    description: description,
+    email: email,
+    tel: tel,
+    //timeSlots: [] 
+  }
+  fetch('http://localhost:3000/studios', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(newStudio)
+  })
+  .then(res => res.json())
+  .then(setStudios([...studios,newStudio]))
+  .then(()=>{
+        setStudioName("")
+    setStudioLocation("")
+    setInstruments("")
+    setPrice("")
+    setImage("")
+    setDescription("")
+    setEmail("")
+    setTel("")}
+  )
+
+  ///add errors
+}
 
   return (
     <div>
-      <form className='newStudioForm'>
-        <input type='text' placeholder='Enter Studio Name' name="studioName" value={studioName}/>
-        <input type='text' placeholder='Enter Studio Location' name="studioLocation" value={studioLocation}/>
-        <input type='text' placeholder='Enter Instruments Available Seperated by a comma' name="instruments" value={instruments}/>
-        <input type='number' placeholder='Enter Studio Price Per Hour' name="price" value={price}/>
-        <input type='url' placeholder='Enter URL for the studio profile image' name="image" value={image}/>
-        <input type='text' placeholder='A word to artists booking with you' name="description" value={description}/>
-        <input type='email' placeholder='Enter Email Address' name="price" value={email}/>
-        <input type='tel' placeholder='Enter Phone Number' name="price" value={tel}/>
+      <form className='newStudioForm'  onSubmit={handleSubmit}>
+        <input type='text' placeholder='Enter Studio Name' name="studioName" value={studioName} onChange={handleNameChange}/>
+        <input type='text' placeholder='Enter Studio Location' name="studioLocation" value={studioLocation}onChange={handleLocationChange}/>
+        <input type='text' placeholder='Enter Instruments Available Seperated by a comma' name="instruments" value={instruments} onChange={handleInstrumentsChange}/>
+        <input type='number' placeholder='Enter Studio Price Per Hour' name="price" value={price} onChange={handlePriceChange}/>
+        <input type='url' placeholder='Enter URL for the studio profile image' name="image" value={image} onChange={handleImageChange}/>
+        <input type='text' placeholder='A word to artists booking with you' name="description" value={description} onChange={handleDescriptionChange}/>
+        <input type='email' placeholder='Enter Email Address' name="email" value={email} onChange={handleEmailChange}/>
+        <input type='tel' placeholder='Enter Phone Number' name="tel" value={tel} onChange={handleTelChange}/>
         <input type='submit' name="submit" />
     </form>
   </div>

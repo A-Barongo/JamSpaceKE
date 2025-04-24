@@ -14,26 +14,17 @@
         "location": "Nairobi",
         "instruments": ["drums", "keyboard", "guitar"],
         "image": "/images/boothatime.jpg",
-        "timeSlots": [
-          {
+        "bookings": [
+           {
+            "id": 1,
+            "userId": 1,
+            "studioId": 1,
             "slot": "10:00 - 12:00",
-            "available": true
-          },
-          {
-            "slot": "12:00 - 14:00",
-            "available": false
-          }
-        ]
-      }
-    ],
-    "bookings": [
-      {
-        "id": 1,
-        "userId": 1,
-        "studioId": 1,
-        "slot": "10:00 - 12:00",
-        "date": "2025-04-25"
+            "date": "2025-04-25"
+            }
+          ]
       }
     ]
+    
   }
   

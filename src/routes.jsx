@@ -13,7 +13,7 @@ const routes = [
       errorElement: <ErrorPage />,
       children: [
            {
-              path: "/",
+              path: "/home",
               element: <Home />,
               
           }, 

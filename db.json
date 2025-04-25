@@ -1,30 +1,61 @@
 {
-    "users": [
-      {
-        "id": 1,
-        "name": "Jane Doe",
-        "email": "jane@example.com",
-        "password": "123456"  
-      }
-    ],
-    "studios": [
-      {
-        "id": 1,
-        "name": "BoothaTime Studio",
-        "location": "Nairobi",
-        "instruments": ["drums", "keyboard", "guitar"],
-        "image": "/images/boothatime.jpg",
-        "bookings": [
-           {
-            "id": 1,
-            "userId": 1,
-            "studioId": 1,
-            "slot": "10:00 - 12:00",
-            "date": "2025-04-25"
-            }
-          ]
-      }
-    ]
-    
-  }
-  
+  "users": [
+    {
+      "id": "1",
+      "name": "Jane Doe",
+      "email": "jane@example.com",
+      "password": "123456"
+    },
+    {
+      "id": "4003",
+      "userName": "allano",
+      "password": "allano",
+      "tel": "+254",
+      "email": "a@gmail.com"
+    },
+    {
+      "id": "c54a",
+      "userName": "Allande",
+      "password": "allande",
+      "tel": "32",
+      "email": "a@gmail.com"
+    },
+    {
+      "id": "c493",
+      "userName": "al",
+      "password": "al",
+      "tel": "1",
+      "email": "a@gmail"
+    },
+    {
+      "id": "c112",
+      "userName": "baro",
+      "password": "baro",
+      "tel": "123`",
+      "email": "a@gmail",
+      "bookings": []
+    }
+  ],
+  "studios": [
+    {
+      "id": "1",
+      "name": "BoothaTime Studio",
+      "location": "Nairobi",
+      "instruments": [
+        "drums",
+        "keyboard",
+        "guitar"
+      ],
+      "image": "/images/boothatime.jpg",
+      "bookings": [
+        {
+          "id": 1,
+          "userId": 1,
+          "studioId": 1,
+          "slot": "10:00 - 12:00",
+          "date": "2025-04-25"
+        }
+      ]
+    }
+  ]
+}

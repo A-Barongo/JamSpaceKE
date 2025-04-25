@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 
-function BookingForm({studioid}) {
+
+function BookingForm({studioid,studioName,studioLocation,currentUser}) {
+  
   const[name,setName]=useState()
   const[tel,setTel]=useState("")
   const[email,setEmail]=useState("")
@@ -41,9 +43,11 @@ function BookingForm({studioid}) {
       description: description,
       email: email,
       tel: tel,
+      studioName:studioName,
+      studioLocation:studioLocation
        
     }
-    fetch(`http://localhost:3000/studios/${studioid}/bookings`, {
+    fetch(`http://localhost:5000/studios/${studioid}/bookings`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -60,7 +64,17 @@ function BookingForm({studioid}) {
       setEmail("")
       setTel("")}
     )
-  
+    
+    const updatedBookings = [...(currentUser.bookings || []), newBooking];
+
+fetch(`http://localhost:5000/users/${currentUser.id}`, {
+  method: 'PATCH',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({ bookings: updatedBookings })
+})
+
     ///add errors
   }
  

@@ -1,19 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react';
 
-function LogInForm() {
+function LogInForm({ onLogin }) {
+  const [userName, setUserName] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    onLogin(userName, password);
+  };
+
   return (
-    <div>
-        <form>
-            <input type='text' placeholder='Enter Username'/>
-            <input type='password' placeholder='Enter Password'/>
-            <input type="checkbox" name="signin" />
-            <label for="signin"> I have an account I want to Sign In</label>
-            <input type="checkbox"  name="register" />
-            <label for="register"> I don't have an account I want to Register</label>
-            <input type="submit" name='submit'/>
-        </form>
-    </div>
-  )
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        placeholder="Enter Username"
+        onChange={(e) => setUserName(e.target.value)}
+        value={userName}
+      />
+      <input
+        type="password"
+        placeholder="Enter Password"
+        onChange={(e) => setPassword(e.target.value)}
+        value={password}
+      />
+      <input type="submit" value="Log In" />
+    </form>
+  );
 }
 
-export default LogInForm
+export default LogInForm;

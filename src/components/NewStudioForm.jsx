@@ -50,7 +50,7 @@ function handleSubmit(event){
     tel: tel,
     //timeSlots: [] 
   }
-  fetch('http://localhost:3000/studios', {
+  fetch('http://localhost:5000/studios', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

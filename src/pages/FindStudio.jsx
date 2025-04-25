@@ -3,7 +3,7 @@ import { useOutletContext } from "react-router-dom"
 import StudioCard from '../components/StudioCard'
 
 function FindStudio() {
-  const { studios } = useOutletContext()
+  const { studios,currentUser } = useOutletContext()
 
   const [location, setLocation] = useState("")
   const [selectedInstruments, setSelectedInstruments] = useState({
@@ -49,6 +49,7 @@ function FindStudio() {
       name={studio.name}
       instruments={studio.instruments}
       id={studio.id}
+      currentUser={currentUser}
     />
   )
 

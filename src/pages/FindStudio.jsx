@@ -54,13 +54,13 @@ function FindStudio() {
   )
 
   return (
-    <div>
-      <form>
-        <input  type='search' placeholder='Search by Location' value={location} onChange={handleLocationChange}
+    <div className="findStudioContainer">
+      <form className="filterForm">
+      <input  type='search' placeholder='Search by Location' value={location} onChange={handleLocationChange}
         />
 
        {Object.keys(selectedInstruments).map(instrument => (
-        <div key={instrument}>
+        <div key={instrument} className="instrumentCheckbox">
           <label htmlFor={instrument}>
             {instrument.replace(/([A-Z])/g, ' $1')}
           </label>

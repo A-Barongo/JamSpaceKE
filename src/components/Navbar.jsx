@@ -4,8 +4,8 @@ import { NavLink } from "react-router-dom";
 
 function NavBar() {
   return (
-    <div class="flex h-screen">
-    <nav class="flex ">
+    <div className='navbarcontainer'>
+    <nav className='navbar'>
       <NavLink to="/" className="nav-link">Home</NavLink>
       <NavLink to="/findstudio" className="nav-link">Find Studio</NavLink>
       <NavLink to="/mybooking" className="nav-link">My Booking</NavLink>

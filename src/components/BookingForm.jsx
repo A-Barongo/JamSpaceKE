@@ -79,17 +79,16 @@ fetch(`http://localhost:5000/users/${currentUser.id}`, {
   }
  
   return (
-    <div>
-      <form className='bookingForm' onSubmit={handleSubmit}>
-        <input type='text' placeholder='Enter FullName' name="fullname" value={name} onChange={handleNameChange}/>
-        <input type='tel' placeholder='Enter Phone Number' name="phoneNumber" value={tel} onChange={handleTelChange}/>
-        <input type='email' placeholder='Enter Email Address' name="email" value={email} onChange={handleEmailChange}/>
-        <input type='date' placeholder='Pick a date' name="date" value={date} onChange={handleDateChange}/>
-        <input type='time' placeholder='Start time' name="startTime" value={startTime} onChange={handleStartTimeChange}/>
-        <input type='time' placeholder='End time' name="endTime" value={endTime} onChange={handleEndTimeChange} />
-        <input type='text' placeholder='Describe what you want out of the session' name="description" value={description} onChange={handleDescriptionChange}/>
-        <input type='submit' name="submit" />
-
+    <div className="bookingFormContainer">
+      <form className="bookingForm" onSubmit={handleSubmit}>
+        <input className="bookingInput" type="text" placeholder="Enter Full Name" name="fullname" value={name} onChange={(e) => setName(e.target.value)} />
+        <input className="bookingInput" type="tel" placeholder="Enter Phone Number" name="phoneNumber" value={tel} onChange={(e) => setTel(e.target.value)} />
+        <input className="bookingInput" type="email" placeholder="Enter Email Address" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <input className="bookingInput" type="date" name="date" value={date} onChange={(e) => setDate(e.target.value)} />
+        <input className="bookingInput" type="time" name="startTime" value={startTime} onChange={(e) => setStartTime(e.target.value)} />
+        <input className="bookingInput" type="time" name="endTime" value={endTime} onChange={(e) => setEndTime(e.target.value)} />
+        <input className="bookingInput" type="text" placeholder="Describe your session goals" name="description" value={description} onChange={(e) => setDescription(e.target.value)} />
+        <input className="bookingSubmit" type="submit" value="Book Now" />
       </form>
     </div>
   )

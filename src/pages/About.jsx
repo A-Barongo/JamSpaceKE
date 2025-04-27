@@ -2,8 +2,9 @@ import React from 'react'
 
 function About() {
   return (
-    <div>
-      <article>
+    <div className="aboutContainer">
+
+    <article className="aboutArticle">
       JamSpaceKE is a platform designed to connect artists, producers, and creatives with music studios that
       fit their needs. Whether you're looking for a studio in a specific location or one equipped with 
       particular instruments, we make it easy to search, compare, and book the perfect space for your next

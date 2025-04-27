@@ -7,14 +7,25 @@ function StudioCard({image,location,name,instruments,id,currentUser}) {
   function handleSelect(){
     setSelect(!selected)
   }
+  function stopClick(event) {
+    event.stopPropagation()
+  }
     return (
-      <div  onClick={handleSelect}>
-          <img src={image} alt='Studio Image'/>
-          <h3>NAME: {name}</h3>
-          <h5>LOCATION: {location}</h5>
-          <h5>INSTRUMENTS: {instruments.join(", ")}</h5>
-        {selected?<BookingForm studioid={id} studioName={name} studioLocation={location} currentUser={currentUser}/>:null}  
-      </div>
+      <div className="studioCard" onClick={handleSelect}>
+      <img src={image} alt="Studio" className="studioImage" />
+      <h3 className="studioName">Name: {name}</h3>
+      <h5 className="studioLocation">Location: {location}</h5>
+      <h5 className="studioInstruments">Instruments: {instruments.join(", ")}</h5>
+      {selected ? (
+        <div onClick={stopClick}>
+          <BookingForm 
+            studioid={id} 
+            studioName={name} 
+            studioLocation={location} 
+            currentUser={currentUser} 
+          />
+        </div>
+      ) : null}      </div>
     )
   }
 

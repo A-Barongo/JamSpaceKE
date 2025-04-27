@@ -74,17 +74,18 @@ function handleSubmit(event){
 }
 
   return (
-    <div>
+    <div className='newStudioFormContainer'>
+      <h2>ENTER YOUR STUDIO DETAILS</h2>
       <form className='newStudioForm'  onSubmit={handleSubmit}>
-        <input type='text' placeholder='Enter Studio Name' name="studioName" value={studioName} onChange={handleNameChange}/>
-        <input type='text' placeholder='Enter Studio Location' name="studioLocation" value={studioLocation}onChange={handleLocationChange}/>
-        <input type='text' placeholder='Enter Instruments Available Seperated by a comma' name="instruments" value={instruments} onChange={handleInstrumentsChange}/>
-        <input type='number' placeholder='Enter Studio Price Per Hour' name="price" value={price} onChange={handlePriceChange}/>
-        <input type='url' placeholder='Enter URL for the studio profile image' name="image" value={image} onChange={handleImageChange}/>
-        <input type='text' placeholder='A word to artists booking with you' name="description" value={description} onChange={handleDescriptionChange}/>
-        <input type='email' placeholder='Enter Email Address' name="email" value={email} onChange={handleEmailChange}/>
-        <input type='tel' placeholder='Enter Phone Number' name="tel" value={tel} onChange={handleTelChange}/>
-        <input type='submit' name="submit" />
+        <input type='text' className='newStudioInput' placeholder='Enter Studio Name' name="studioName" value={studioName} onChange={handleNameChange}/>
+        <input type='text' className='newStudioInput' placeholder='Enter Studio Location' name="studioLocation" value={studioLocation}onChange={handleLocationChange}/>
+        <input type='text' className='newStudioInput' placeholder='Enter Instruments Available Seperated by a comma' name="instruments" value={instruments} onChange={handleInstrumentsChange}/>
+        <input type='number' className='newStudioInput' placeholder='Enter Studio Price Per Hour' name="price" value={price} onChange={handlePriceChange}/>
+        <input type='url' className='newStudioInput' placeholder='Enter URL for the studio profile image' name="image" value={image} onChange={handleImageChange}/>
+        <input type='text' className='newStudioInput' placeholder='A word to artists booking with you' name="description" value={description} onChange={handleDescriptionChange}/>
+        <input type='email' className='newStudioInput' placeholder='Enter Email Address' name="email" value={email} onChange={handleEmailChange}/>
+        <input type='tel' className='newStudioInput' placeholder='Enter Phone Number' name="tel" value={tel} onChange={handleTelChange}/>
+        <input type='submit' className='newStudioSubmit' name="submit" />
     </form>
   </div>
   )

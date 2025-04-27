@@ -85,13 +85,13 @@ function App() {
   }
 
   return (
-    <>
+    <div className='bodycontainer'>
       <div className="headerSection">
         <img src="./assets/jamspaceLogo.png" alt="JamSpace Logo" />
         <Navbar onLogout={handleLogout} />
       </div>
       <Outlet context={{ users, studios, currentUser, setUsers, setStudios }} />
-      </>
+      </div>
   );
 }
 

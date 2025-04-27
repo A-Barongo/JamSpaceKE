@@ -90,11 +90,13 @@ function App() {
   return (
     <>
     <div className='bodycontainer'>
-     
+    
       <div className="headerSection">
           <Navbar onLogout={handleLogout} />
       </div>
+      <div className="pageContent">
       <Outlet context={{ users, studios, currentUser, setUsers, setStudios }} />
+      </div>
       </div>
       <Footer/>
       

@@ -81,7 +81,7 @@ function handleSubmit(event){
 
   return (
     <div className='newStudioFormContainer'>
-      <h2>ENTER YOUR STUDIO DETAILS</h2>
+      <h2 id='newStudioHead'>ENTER YOUR STUDIO DETAILS</h2>
       <form className='newStudioForm'  onSubmit={handleSubmit}>
         <input type='text' className='newStudioInput' placeholder='Enter Studio Name' name="studioName" value={studioName} onChange={handleNameChange}/>
         <input type='text' className='newStudioInput' placeholder='Enter Studio Location' name="studioLocation" value={studioLocation}onChange={handleLocationChange}/>

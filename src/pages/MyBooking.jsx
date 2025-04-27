@@ -42,7 +42,7 @@ function MyBooking() {
   }
     return (
       <div>
-        <h2>MY Studio Session Bookings</h2>
+        <h2 id='bookingHead'>MY Studio Session Bookings</h2>
       {editing ? (
         <BookingForm 
         editing={editing} 

@@ -35,9 +35,12 @@ function FindStudio() {
 
   const filteredStudios = studios.filter(studio => {
     const matchesLocation = location === "" || studio.location.toLowerCase().includes(location.toLowerCase())
-    const matchesInstruments = selectedInstrumentList.every(instr =>
-      studio.instruments.includes(instr)
+    const matchesInstruments = selectedInstrumentList.every(instrKey => 
+      studio.instruments.some(studioInstr => 
+        studioInstr.replace(/\s+/g, '').toLowerCase() === instrKey.toLowerCase()
+      )
     )
+    
     return matchesLocation && matchesInstruments
   })
 
@@ -49,6 +52,8 @@ function FindStudio() {
       name={studio.name}
       instruments={studio.instruments}
       id={studio.id}
+      price={studio.price}
+      bookings={studio.bookings}
       currentUser={currentUser}
     />
   )

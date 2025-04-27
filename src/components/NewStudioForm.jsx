@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import Swal from 'sweetalert2'
 
 function NewStudioForm({studios,setStudios}) {
 
@@ -48,7 +49,7 @@ function handleSubmit(event){
     description: description,
     email: email,
     tel: tel,
-    //timeSlots: [] 
+    bookings:[] 
   }
   fetch('http://localhost:5000/studios', {
     method: 'POST',
@@ -69,8 +70,13 @@ function handleSubmit(event){
     setEmail("")
     setTel("")}
   )
-
-  ///add errors
+  .catch(() => {
+    Swal.fire({
+      title: "Studio registration Failed!",
+      text: "Try again later",
+      icon: "error"
+    })
+      })
 }
 
   return (

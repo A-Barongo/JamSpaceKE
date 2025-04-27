@@ -1,15 +1,16 @@
 import React, { useState } from 'react'
+import Swal from 'sweetalert2'
 
 
-function BookingForm({studioid,studioName,studioLocation,currentUser}) {
+function BookingForm({studioid,studioName,studioLocation,currentUser,closeForm,studioBookings,editing}) {
   
-  const[name,setName]=useState()
-  const[tel,setTel]=useState("")
-  const[email,setEmail]=useState("")
-  const[date,setDate]=useState("")
-  const[startTime,setStartTime]=useState("")
-  const[endTime,setEndTime]=useState("")
-  const[description,setDescription]=useState("")
+  const[name,setName]=useState(editing?editing.name:"")
+  const[tel,setTel]=useState(editing?editing.tel:"")
+  const[email,setEmail]=useState(editing?editing.email:"")
+  const[date,setDate]=useState(editing?editing.date:"")
+  const[startTime,setStartTime]=useState(editing?editing.startTime:"")
+  const[endTime,setEndTime]=useState(editing?editing.endTime:"")
+  const[description,setDescription]=useState(editing?editing.description:"")
 
   function handleNameChange(event){
     setName(event.target.value)
@@ -47,14 +48,27 @@ function BookingForm({studioid,studioName,studioLocation,currentUser}) {
       studioLocation:studioLocation
        
     }
-    fetch(`http://localhost:5000/studios/${studioid}/bookings`, {
-      method: 'POST',
+    fetch(`http://localhost:5000/studios/${studioid}`, {
+      method: "PATCH",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json"
       },
-      body: JSON.stringify(newBooking)
+      body: JSON.stringify({
+        bookings: [...(studioBookings || []), newBooking]
+      })
     })
     .then(res => res.json())
+    .then(()=>{
+      const updatedBookings = [...(currentUser.bookings || []), newBooking]
+      fetch(`http://localhost:5000/users/${currentUser.id}`, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ bookings: updatedBookings })
+      })
+
+    })
     .then(()=>{
       setName("")
       setDate("")
@@ -62,32 +76,27 @@ function BookingForm({studioid,studioName,studioLocation,currentUser}) {
       setEndTime("")
       setDescription("")
       setEmail("")
-      setTel("")}
+      setTel("")
+      closeForm ()
+    Swal.fire('Submission successful')
+    }
     )
-    
-    const updatedBookings = [...(currentUser.bookings || []), newBooking];
-
-fetch(`http://localhost:5000/users/${currentUser.id}`, {
-  method: 'PATCH',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify({ bookings: updatedBookings })
-})
-
-    ///add errors
+    .catch(() => {
+      Swal.fire("Booking failed:")
+    })
+   
   }
  
   return (
     <div className="bookingFormContainer">
       <form className="bookingForm" onSubmit={handleSubmit}>
-        <input className="bookingInput" type="text" placeholder="Enter Full Name" name="fullname" value={name} onChange={(e) => setName(e.target.value)} />
-        <input className="bookingInput" type="tel" placeholder="Enter Phone Number" name="phoneNumber" value={tel} onChange={(e) => setTel(e.target.value)} />
-        <input className="bookingInput" type="email" placeholder="Enter Email Address" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-        <input className="bookingInput" type="date" name="date" value={date} onChange={(e) => setDate(e.target.value)} />
-        <input className="bookingInput" type="time" name="startTime" value={startTime} onChange={(e) => setStartTime(e.target.value)} />
-        <input className="bookingInput" type="time" name="endTime" value={endTime} onChange={(e) => setEndTime(e.target.value)} />
-        <input className="bookingInput" type="text" placeholder="Describe your session goals" name="description" value={description} onChange={(e) => setDescription(e.target.value)} />
+        <input className="bookingInput" type="text" placeholder="Enter Full Name" name="fullname" value={name} onChange={handleNameChange} />
+        <input className="bookingInput" type="tel" placeholder="Enter Phone Number" name="phoneNumber" value={tel} onChange={handleTelChange} />
+        <input className="bookingInput" type="email" placeholder="Enter Email Address" name="email" value={email} onChange={handleEmailChange} />
+        <input className="bookingInput" type="date" name="date" value={date} onChange={handleDateChange} />
+        <input className="bookingInput" type="time" name="startTime" value={startTime} onChange={handleStartTimeChange} />
+        <input className="bookingInput" type="time" name="endTime" value={endTime} onChange={handleEndTimeChange} />
+        <input className="bookingInput" type="text" placeholder="Describe your session goals" name="description" value={description} onChange={handleDescriptionChange} />
         <input className="bookingSubmit" type="submit" value="Book Now" />
       </form>
     </div>

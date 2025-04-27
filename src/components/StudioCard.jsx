@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import BookingForm from './BookingForm'
 
-function StudioCard({image,location,name,instruments,id,currentUser}) {
+function StudioCard({image,location,name,instruments,id,currentUser,price,bookings}) {
   const[selected,setSelect]=useState(false)
 
   function handleSelect(){
@@ -15,6 +15,7 @@ function StudioCard({image,location,name,instruments,id,currentUser}) {
       <img src={image} alt="Studio" className="studioImage" />
       <h3 className="studioName">Name: {name}</h3>
       <h5 className="studioLocation">Location: {location}</h5>
+      <h5 className="studioLocation">Price/Hour: {price}</h5>
       <h5 className="studioInstruments">Instruments: {instruments.join(", ")}</h5>
       {selected ? (
         <div onClick={stopClick}>
@@ -22,7 +23,9 @@ function StudioCard({image,location,name,instruments,id,currentUser}) {
             studioid={id} 
             studioName={name} 
             studioLocation={location} 
-            currentUser={currentUser} 
+            currentUser={currentUser}
+            studioBookings={bookings}
+            closeForm={() => setSelect(false)} 
           />
         </div>
       ) : null}      </div>

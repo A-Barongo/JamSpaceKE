@@ -10,21 +10,24 @@ function LogInForm({ onLogin }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className="loginFormConstainer">
+    <form className="loginForm" onSubmit={handleSubmit}>
       <input
         type="text"
+        className="loginInput"
         placeholder="Enter Username"
         onChange={(e) => setUserName(e.target.value)}
         value={userName}
       />
       <input
         type="password"
+        className="loginInput"
         placeholder="Enter Password"
         onChange={(e) => setPassword(e.target.value)}
         value={password}
       />
-      <input type="submit" value="Log In" />
-    </form>
+      <input type="submit" className="loginButton" value="Log In" />
+    </form></div>
   );
 }
 

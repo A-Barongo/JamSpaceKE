@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import LogInForm from './components/LogInForm';
 import RegistrationForm from './components/RegistrationForm';
 import './App.css';
+import Swal from 'sweetalert2';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -20,13 +21,13 @@ function App() {
     fetch('http://localhost:5000/users')
       .then(res => res.json())
       .then(data => setUsers(data))
-      .catch(error => console.error('Error fetching users:', error));
+      .catch(error => Swal.fire('Error fetching users:', error));
   
    
     fetch('http://localhost:5000/studios')
       .then(res => res.json())
       .then(data => setStudios(data))
-      .catch(error => console.error('Error fetching studios:', error));
+      .catch(error => Swal.fire('Error fetching studios:', error));
   
     
   }, [users,studios]);
@@ -41,8 +42,9 @@ function App() {
       setIsAuthenticated(true);
       navigate('/home');
       setCurrentUser(user)
+      
     } else {
-      alert('Invalid credentials');
+      Swal.fire("Invalid Credentials")
     }
   };
 
@@ -54,13 +56,13 @@ function App() {
     })
       .then(res => res.json())
       .then(data => {
-        setUsers(prevUsers => [...prevUsers, data]);
+        setUsers(prevUsers => [...prevUsers, data])
         setShowRegistration(false);
-        alert('Registration Successful! Please log in.');
+        Swal.fire("Successful Registration")
       })
       
       .catch(error => {
-        console.error('Error during registration:', error);
+        Swal.fire('Error during registration')
       });
   };
 
@@ -71,7 +73,7 @@ function App() {
 
   if (!isAuthenticated) {
     return (
-      <div className="auth-container">
+      <div className="authContainer">
         {showRegistration ? (
           <RegistrationForm onRegister={handleRegister} />
         ) : (

@@ -11,7 +11,8 @@
       "userName": "allano",
       "password": "allano",
       "tel": "+254",
-      "email": "a@gmail.com"
+      "email": "a@gmail.com",
+      "bookings": []
     },
     {
       "id": "c54a",
@@ -25,7 +26,20 @@
       "userName": "al",
       "password": "al",
       "tel": "1",
-      "email": "a@gmail"
+      "email": "a@gmail",
+      "bookings": [
+        {
+          "name": "al",
+          "date": "",
+          "startTime": "",
+          "endTime": "",
+          "description": "",
+          "email": "m@gmail.com",
+          "tel": "+254",
+          "studioName": "Moringa Beats",
+          "studioLocation": "Nairobi"
+        }
+      ]
     },
     {
       "id": "c112",
@@ -33,6 +47,14 @@
       "password": "baro",
       "tel": "123`",
       "email": "a@gmail",
+      "bookings": []
+    },
+    {
+      "id": "0776",
+      "userName": "st",
+      "password": "st",
+      "tel": "12",
+      "email": "st@gmail",
       "bookings": []
     }
   ],
@@ -46,7 +68,7 @@
         "keyboard",
         "guitar"
       ],
-      "image": "/images/boothatime.jpg",
+      "image": "https://robohash.org/nostrumrepellendustenetur.png?size=300x300&set=set1",
       "bookings": [
         {
           "id": 1,
@@ -54,6 +76,123 @@
           "studioId": 1,
           "slot": "10:00 - 12:00",
           "date": "2025-04-25"
+        },
+        {
+          "name": "q",
+          "date": "2025-05-05",
+          "startTime": "11:40",
+          "endTime": "02:40",
+          "description": "",
+          "email": "q@gmail",
+          "tel": "+254",
+          "studioName": "BoothaTime Studio",
+          "studioLocation": "Nairobi"
+        },
+        {
+          "name": "Q",
+          "date": "2025-05-05",
+          "startTime": "11:41",
+          "endTime": "03:41",
+          "description": "",
+          "email": "q@gmail",
+          "tel": "+254",
+          "studioName": "BoothaTime Studio",
+          "studioLocation": "Nairobi"
+        },
+        {
+          "name": "lan",
+          "date": "2025-05-05",
+          "startTime": "11:44",
+          "endTime": "15:44",
+          "description": "",
+          "email": "lan@gmail",
+          "tel": "231",
+          "studioName": "BoothaTime Studio",
+          "studioLocation": "Nairobi"
+        },
+        {
+          "name": "lano",
+          "date": "",
+          "startTime": "",
+          "endTime": "",
+          "description": "",
+          "email": "m@gmail.com",
+          "tel": "+254",
+          "studioName": "BoothaTime Studio",
+          "studioLocation": "Nairobi"
+        },
+        {
+          "name": "allano",
+          "date": "2025-04-23",
+          "startTime": "13:14",
+          "endTime": "14:14",
+          "description": "We are Kean on copyright",
+          "email": "q@gmail",
+          "tel": "12",
+          "studioName": "BoothaTime Studio",
+          "studioLocation": "Nairobi"
+        }
+      ]
+    },
+    {
+      "id": "6605",
+      "name": "Moringa Beats",
+      "location": "Nairobi",
+      "instruments": [
+        "cello",
+        "violin",
+        "keyboard",
+        "Electric guitar"
+      ],
+      "price": 2000,
+      "image": "https://robohash.org/quidemconsequaturaut.png?size=300x300&set=set1",
+      "description": "We are Kean on copyright",
+      "email": "m@gmail.com",
+      "tel": "123456",
+      "bookings": [
+        {
+          "name": "q",
+          "date": "2025-05-04",
+          "startTime": "",
+          "endTime": "",
+          "description": "",
+          "email": "q@gmail",
+          "tel": "+254",
+          "studioName": "Moringa Beats",
+          "studioLocation": "Nairobi"
+        },
+        {
+          "name": "lan",
+          "date": "2025-05-01",
+          "startTime": "",
+          "endTime": "",
+          "description": "",
+          "email": "la@gmail",
+          "tel": "12",
+          "studioName": "Moringa Beats",
+          "studioLocation": "Nairobi"
+        },
+        {
+          "name": "lan",
+          "date": "2025-05-05",
+          "startTime": "13:45",
+          "endTime": "16:45",
+          "description": "",
+          "email": "lan@gmail",
+          "tel": "345",
+          "studioName": "Moringa Beats",
+          "studioLocation": "Nairobi"
+        },
+        {
+          "name": "al",
+          "date": "",
+          "startTime": "",
+          "endTime": "",
+          "description": "",
+          "email": "m@gmail.com",
+          "tel": "+254",
+          "studioName": "Moringa Beats",
+          "studioLocation": "Nairobi"
         }
       ]
     }

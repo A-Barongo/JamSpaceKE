@@ -5,6 +5,7 @@ import LogInForm from './components/LogInForm';
 import RegistrationForm from './components/RegistrationForm';
 import './App.css';
 import Swal from 'sweetalert2';
+import Footer from './components/Footer';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -87,13 +88,17 @@ function App() {
   }
 
   return (
+    <>
     <div className='bodycontainer'>
+     
       <div className="headerSection">
-        <img src="./assets/jamspaceLogo.png" alt="JamSpace Logo" />
-        <Navbar onLogout={handleLogout} />
+          <Navbar onLogout={handleLogout} />
       </div>
       <Outlet context={{ users, studios, currentUser, setUsers, setStudios }} />
       </div>
+      <Footer/>
+      
+      </>
   );
 }
 

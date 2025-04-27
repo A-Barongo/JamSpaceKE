@@ -10,7 +10,7 @@ function LogInForm({ onLogin }) {
   };
 
   return (
-    <div className="loginFormConstainer">
+    <div className="loginFormContainer">
     <form className="loginForm" onSubmit={handleSubmit}>
       <input
         type="text"

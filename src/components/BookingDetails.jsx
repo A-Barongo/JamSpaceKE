@@ -3,7 +3,7 @@ import React from 'react'
 function BookingDetails({booking,onDelete,onEdit}) {
   if (!booking) return <p>No booking details available.</p>
   return (
-    <div>
+    <div className='bookingDetails'>
       <h4>Artist Name: {booking.name}</h4>
       <h4>Session Studio: {booking.studioName}</h4>
       <h4>Studio Location: {booking.studioLocation}</h4>

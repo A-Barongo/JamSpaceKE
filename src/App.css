@@ -1,7 +1,17 @@
 .authContainer{
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   
 }
+.loginFormContainer {
+ border-radius: 15px;  
+  background-color: #e28d2c; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .loginForm,
 .regForm {
   display: flex;
@@ -13,7 +23,7 @@
   padding: 30px;
   background-color: #f4f4f4;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
 }
 
 .loginInput,.regFormInput
@@ -46,10 +56,15 @@
 .loginButton:hover {
   background-color: #005fa3;
 }
-
+.homeArticle{
+  background-color: white;
+  color: #d88b0e;
+  padding: 20px;
+  border-radius: 15px;
+}
 .bodycontainer {
   display: flex; 
-  min-height: 100vh;
+  min-height: 85vh;
 }
 .navbarcontainer {
   
@@ -86,11 +101,11 @@
 }
 
 .newStudioFormContainer {
-  
+  padding:10px;
   align-items: center;
-  
+  border-radius: 20px;
   min-height: 100vh;
-  background-color: #f7f7f7;
+  background-color: #f8d89c;
   width:80vw ;
 }
 
@@ -137,7 +152,7 @@
   background-color: #4048d1;
 }
 h2{
-  color: #3fb5e4;
+  color: #ff9900;
 }
 
 .findStudioContainer {
@@ -148,7 +163,7 @@ h2{
 }
 
 .filterForm {
-  background-color: #ffffff;
+  background-color: #efd599;
   padding: 1.5rem 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -160,18 +175,13 @@ h2{
   gap: 1rem;
 }
 
-.searchInput {
-  padding: 0.8rem 1rem;
+#searchInput {
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 1rem;
-  outline: none;
+  
 }
-
-.searchInput:focus {
-  border-color: #5c67f2;
-}
-
 .instrumentsFilter {
   display: flex;
   flex-wrap: wrap;
@@ -193,7 +203,7 @@ h2{
 }
 
 .aboutArticle {
-  background-color: #ffffff;
+  background-color: #dbd0b1;
   padding: 2rem;
   max-width: 800px;
   line-height: 1.8;
@@ -203,16 +213,21 @@ h2{
   color: #333333;
   text-align: center;
 }
+.studioContainer{
+display: flex;
+flex-direction: row;
+}
 .studioCard {
   border: 2px solid #ccc;
+  width: auto;
+  height: auto;
   border-radius: 12px;
   padding: 1.5rem;
   margin: 1rem;
   max-width: 400px;
   text-align: center;
-  transition: all 0.3s ease;
-  background-color: #fff;
-  cursor: pointer;
+   background-color: #fff;
+  cursor: pointer;  
 }
 
 .studioCard:hover {
@@ -221,20 +236,20 @@ h2{
 }
 
 .studioImage {
-  width: 100%;
-  height: 200px;
+  width: 60%;
+  height: auto;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 1rem;
 }
 
 .studioName {
-  font-size: 1.5rem;
+  font-size: 20px;
   color: #333;
 }
 
 .studioLocation, .studioInstruments {
-  font-size: 1rem;
+  font-size: 15px;
   color: #666;
   margin-top: 0.5rem;
 }
@@ -278,4 +293,13 @@ h2{
 
 .bookingSubmit:hover {
   background-color: #5a2bb8;
+}
+.bookingDetails{
+  background-color: #decd97;
+  color: black;
+  padding:15px;
+  border-radius: 15px;
+}
+.footer{
+  text-align: center;
 }

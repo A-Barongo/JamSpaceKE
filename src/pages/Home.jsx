@@ -1,16 +1,18 @@
 import React from 'react';
-import { useOutletContext } from 'react-router-dom';
 
 function Home() {
-  const context = useOutletContext();
-
-  // Only if you're using the context:
-  const users = context?.users ?? [];
-
+ 
   return (
-    <div>
-      <h1>This is home</h1>
-      {/* <p>Total users: {users.length}</p> */}
+    <div className="homeContainer">
+
+    <article className="homeArticle">
+      JamSpaceKE is a platform designed to connect artists, producers, and creatives with music studios that
+      fit their needs. Whether you're looking for a studio in a specific location or one equipped with 
+      particular instruments, we make it easy to search, compare, and book the perfect space for your next
+      session. Our goal is to simplify the booking process and support the creative community by providing
+      a seamless, reliable, and transparent way to access studio time.  Whether you're recording your first
+      track or your next big project, we're here to help you find the right vibe to bring your sound to life. 
+      </article>
     </div>
   );
 }

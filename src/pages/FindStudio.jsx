@@ -61,9 +61,9 @@ function FindStudio() {
   return (
     <div className="findStudioContainer">
       <form className="filterForm">
-      <input  type='search' placeholder='Search by Location' value={location} onChange={handleLocationChange}
+      <input  id='searchInput'type='search' placeholder='Search by Location' value={location} onChange={handleLocationChange}
         />
-
+      <div id="checkBoxContainer">
        {Object.keys(selectedInstruments).map(instrument => (
         <div key={instrument} className="instrumentCheckbox">
           <label htmlFor={instrument}>
@@ -72,10 +72,10 @@ function FindStudio() {
           <input type="checkbox" id={instrument}   onChange={handleInstrumentChange} checked={selectedInstruments[instrument]}
           />
         </div>
-        ))}
+        ))}</div>
       </form>
 
-      <div>
+      <div className='studioContainer'>
         {displayedStudios}
       </div>
     </div>

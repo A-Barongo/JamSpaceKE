@@ -62,7 +62,7 @@ function App() {
         Swal.fire("Successful Registration")
       })
       
-      .catch(error => {
+      .catch(() => {
         Swal.fire('Error during registration')
       });
   };

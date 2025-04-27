@@ -1,8 +1,8 @@
-.authContainer{
+body .authContainer{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
+  padding-left: 400px;
 }
 .loginFormContainer {
  border-radius: 15px;  
@@ -58,14 +58,16 @@
 }
 .homeArticle{
   background-color: black;
+  opacity: 0.9;
   color:white ;
   padding: 20px;
   border-radius: 15px;
   font-family: sans-serif;
+  font-size: 20px;
   width: 75%;
 }
 body{
-  background-image: url("src/assets/The Final Countdow.jpeg")
+  background-image: url("src/assets/The Final Countdow.jpeg");
   
   
 }

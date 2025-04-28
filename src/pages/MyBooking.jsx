@@ -7,7 +7,7 @@ import Swal from 'sweetalert2'
 
 function MyBooking() {
  
-  const { currentUser, users, setUsers,studios } = useOutletContext()
+  const { currentUser, users, setUsers } = useOutletContext()
   const [editing, setEditing] = useState(null)
 
   const handleDelete = (bookingId) => {

@@ -30,25 +30,25 @@
       "bookings": [
         {
           "name": "al",
-          "date": "",
-          "startTime": "",
-          "endTime": "",
+          "date": "2025-04-29",
+          "startTime": "09:44",
+          "endTime": "11:45",
           "description": "",
-          "email": "m@gmail.com",
+          "email": "q@gmail",
           "tel": "+254",
-          "studioName": "Moringa Beats",
-          "studioLocation": "Nairobi"
-        },
-        {
-          "name": "lano",
-          "date": "2025-04-28",
-          "startTime": "09:13",
-          "endTime": "00:13",
-          "description": "",
-          "email": "m@gmail.com",
-          "tel": "09876",
           "studioName": "VibeBeatz Studio",
           "studioLocation": "Nakuru"
+        },
+        {
+          "name": "lande",
+          "date": "2025-04-28",
+          "startTime": "09:46",
+          "endTime": "13:46",
+          "description": "testing",
+          "email": "q@gmail",
+          "tel": "2121",
+          "studioName": "Karen Muziki ",
+          "studioLocation": "Mombasa"
         }
       ]
     },
@@ -233,6 +233,17 @@
           "tel": "09876",
           "studioName": "VibeBeatz Studio",
           "studioLocation": "Nakuru"
+        },
+        {
+          "name": "al",
+          "date": "2025-04-29",
+          "startTime": "09:44",
+          "endTime": "11:45",
+          "description": "",
+          "email": "q@gmail",
+          "tel": "+254",
+          "studioName": "VibeBeatz Studio",
+          "studioLocation": "Nakuru"
         }
       ]
     },
@@ -251,7 +262,30 @@
       "description": "",
       "email": "sp@gmail.com",
       "tel": "234455",
-      "bookings": []
+      "bookings": [
+        {
+          "name": "lande",
+          "date": "2025-04-28",
+          "startTime": "10:05",
+          "endTime": "11:45",
+          "description": "",
+          "email": "lan@gmail",
+          "tel": "6484943",
+          "studioName": "Karen Muziki ",
+          "studioLocation": "Mombasa"
+        },
+        {
+          "name": "lande",
+          "date": "2025-04-28",
+          "startTime": "09:46",
+          "endTime": "13:46",
+          "description": "testing",
+          "email": "q@gmail",
+          "tel": "2121",
+          "studioName": "Karen Muziki ",
+          "studioLocation": "Mombasa"
+        }
+      ]
     },
     {
       "id": "dbed",
@@ -269,6 +303,23 @@
       "description": "Vibe ni Heavy",
       "email": "q@gmail",
       "tel": "234455",
+      "bookings": []
+    },
+    {
+      "id": "468f",
+      "name": "Selassie Musix",
+      "location": "Juja",
+      "instruments": [
+        "bass guitar",
+        "electric guitar",
+        "acoustic guitar",
+        "drum set"
+      ],
+      "price": 1500,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtHNqBBTA4XSxF7wY8Jw__Yh_pn8kFc2FfRg&s",
+      "description": "Fika Sesh",
+      "email": "jujamaica@gmail.com",
+      "tel": "420",
       "bookings": []
     }
   ]

@@ -1,7 +1,6 @@
 body{
   background-image: url("src/assets/The Final Countdow.jpeg");
-  background: image opacity 0.4;
-  
+    
 }
 body .authContainer{
   display: flex;
@@ -95,17 +94,20 @@ grid-template-columns: repeat(3, 1fr);
 }
 
 .pageContent{
-  padding-left: 80px;
+  padding-left: 270px;
 }
 .navbarcontainer {
-  
+  position: fixed; 
+  top: 0; 
+  left: 0;
   background-color: #222; 
   padding: 1rem 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  height: 90vh;
+  height: 100vh;
 }
 
 .navbar {
+  
   display: flex;
   width: 20vw;
   justify-content: center;
@@ -347,4 +349,8 @@ gap:1em;
 .footer{
   text-align: center;
   background-color: #222;
+  position: relative;
+  height: 10vh;
+  bottom: 0;
+  width: 100vw;
 }

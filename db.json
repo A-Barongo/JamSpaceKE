@@ -49,6 +49,17 @@
           "tel": "2121",
           "studioName": "Karen Muziki ",
           "studioLocation": "Mombasa"
+        },
+        {
+          "name": "al",
+          "date": "2025-04-28",
+          "startTime": "09:12",
+          "endTime": "11:12",
+          "description": "",
+          "email": "q@gmail",
+          "tel": "2344",
+          "studioName": "Selassie Musix",
+          "studioLocation": "Juja"
         }
       ]
     },
@@ -320,6 +331,34 @@
       "description": "Fika Sesh",
       "email": "jujamaica@gmail.com",
       "tel": "420",
+      "bookings": [
+        {
+          "name": "al",
+          "date": "2025-04-28",
+          "startTime": "09:12",
+          "endTime": "11:12",
+          "description": "",
+          "email": "q@gmail",
+          "tel": "2344",
+          "studioName": "Selassie Musix",
+          "studioLocation": "Juja"
+        }
+      ]
+    },
+    {
+      "id": "82d9",
+      "name": "jamspace",
+      "location": "kitale",
+      "instruments": [
+        "cello",
+        "violin",
+        "keyboard"
+      ],
+      "price": 1000,
+      "image": "https://www.sjbikeparty.org/wp-content/uploads/2015/06/theme6.jpg",
+      "description": "Come Lets vibe",
+      "email": "q@gmail",
+      "tel": "123456",
       "bookings": []
     }
   ]

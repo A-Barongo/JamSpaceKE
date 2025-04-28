@@ -22,13 +22,13 @@ function App() {
     fetch('http://localhost:5000/users')
       .then(res => res.json())
       .then(data => setUsers(data))
-      .catch(error => Swal.fire('Error fetching users:', error));
+      .catch(() => Swal.fire('Error fetching users:'));
   
    
     fetch('http://localhost:5000/studios')
       .then(res => res.json())
       .then(data => setStudios(data))
-      .catch(error => Swal.fire('Error fetching studios:', error));
+      .catch(() => Swal.fire('Error fetching studios:'));
   
     
   }, [users,studios]);

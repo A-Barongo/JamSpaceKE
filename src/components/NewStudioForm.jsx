@@ -61,6 +61,10 @@ function handleSubmit(event){
   .then(res => res.json())
   .then(setStudios([...studios,newStudio]))
   .then(()=>{
+    Swal.fire({
+      title: "Studio registration Successful!",
+      text: "Welcome to JamSpaceKE",
+      icon: "success"})
         setStudioName("")
     setStudioLocation("")
     setInstruments("")
@@ -69,6 +73,8 @@ function handleSubmit(event){
     setDescription("")
     setEmail("")
     setTel("")}
+
+  
   )
   .catch(() => {
     Swal.fire({

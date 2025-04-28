@@ -43,6 +43,7 @@ function MyBooking() {
     return (
       <div>
         <h2 id='bookingHead'>MY Studio Session Bookings</h2>
+        <div className='bookingContainer'>
       {editing ? (
         <BookingForm 
         editing={editing} 
@@ -58,7 +59,7 @@ function MyBooking() {
             onDelete={handleDelete} 
           />
         ))
-      )}
+      )}</div>
     </div>
   )
 }

@@ -38,6 +38,17 @@
           "tel": "+254",
           "studioName": "Moringa Beats",
           "studioLocation": "Nairobi"
+        },
+        {
+          "name": "lano",
+          "date": "2025-04-28",
+          "startTime": "09:13",
+          "endTime": "00:13",
+          "description": "",
+          "email": "m@gmail.com",
+          "tel": "09876",
+          "studioName": "VibeBeatz Studio",
+          "studioLocation": "Nakuru"
         }
       ]
     },
@@ -195,6 +206,70 @@
           "studioLocation": "Nairobi"
         }
       ]
+    },
+    {
+      "id": "0cc0",
+      "name": "VibeBeatz Studio",
+      "location": "Nakuru",
+      "instruments": [
+        "Acoustic Guitar",
+        "violin",
+        "saxophone",
+        "drum set"
+      ],
+      "price": 2000,
+      "image": "https://creatorset.com/cdn/shop/files/Green_Screen_dj_shaq.png?v=1711725297",
+      "description": "Come Lets vibe",
+      "email": "lan@gmail",
+      "tel": "123456",
+      "bookings": [
+        {
+          "name": "lano",
+          "date": "2025-04-28",
+          "startTime": "09:13",
+          "endTime": "00:13",
+          "description": "",
+          "email": "m@gmail.com",
+          "tel": "09876",
+          "studioName": "VibeBeatz Studio",
+          "studioLocation": "Nakuru"
+        }
+      ]
+    },
+    {
+      "id": "f253",
+      "name": "Karen Muziki ",
+      "location": "Mombasa",
+      "instruments": [
+        "Acoustic guitar",
+        "electric guitar",
+        "trumpet",
+        "keyboard"
+      ],
+      "price": 3000,
+      "image": "https://cms-fym.imgix.net/2_N_Vdkn1_Z_Ty8_NVF_Pwu_C0w_b095582174.png?auto=compress,format&fit=fillmax&ch=Save-Data&w=1600&max-h=1600",
+      "description": "",
+      "email": "sp@gmail.com",
+      "tel": "234455",
+      "bookings": []
+    },
+    {
+      "id": "dbed",
+      "name": "JAM na KIZANGILA",
+      "location": "Ongata Rongai",
+      "instruments": [
+        "Cello",
+        "Bass guitar",
+        "electric guitar",
+        "trumpet",
+        "Keyboard"
+      ],
+      "price": 1500,
+      "image": "https://creatorset.com/cdn/shop/files/preview_images/Screenshot_2023-05-21_062318_530x@2x.png?v=1684639601",
+      "description": "Vibe ni Heavy",
+      "email": "q@gmail",
+      "tel": "234455",
+      "bookings": []
     }
   ]
 }
